@@ -47,6 +47,17 @@ body {
   font-size: var(--fs-body);
 }
 
+.navbar-nav{
+  margin-left: auto;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+
 .logo{
   width: 60px;
   height: 60px;
