@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <script src="/indjs.js"></script>
   <header>
     <!--Navbar-->
     <nav>
@@ -23,12 +23,12 @@
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home
+                <a class="nav-link active" href="#" style="color: rgb(113, 30, 146);">Home
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#" >About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Events</a>
@@ -47,16 +47,66 @@
                 </div>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
     </nav>
   </header>
-    
-    
+  <div class="pics" style="max-width:800px">
+    <img class="mySlides" src="/oie_rtlvQajaE8nP.png">
+    <img class="mySlides" src="/oie_t9PrgtetDQDN.png">
+    <img class="mySlides" src="/oie_VnALJUaRcms8.png">
+    <div class="text">
+      Dance & Dramatics
+    </div>
+    <div class="text1">
+      Club
+    </div>
+    <br>
+    <br>
+    <h3 class="quote">"Do Anything Let it Produce joy"</h3>
+  </div>
+  <script>
+    var myIndex = 0;
+    carousel();
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 6000);    
+    }
+
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+    </script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Playfair+Display:ital@1&display=swap');
+
 *,
 *::before,
 *::after {
@@ -56,3 +58,34 @@ body {
   background-color: var(--navbar-bg-color);
 }
 /*# sourceMappingURL=style.css.map */
+
+.mySlides{
+  width: 1925px;
+  height: 80vh;
+  opacity: 0.6;
+}
+
+.text{
+  font-size: 75px;
+  font-family: 'Playfair Display', serif;
+  color: rgb(206, 216, 215);
+  position:absolute;top:20vh;left:50%;transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%)
+}
+
+.text1{
+  font-size: 75px;
+  font-family: 'Playfair Display', serif;
+  color: rgb(206, 216, 215);
+  position:absolute;top: 30vh;left:46%;transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%)
+}
+
+.quote{
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  color: rgb(106, 38, 146);
+  position:absolute;
+  top: 92vh;
+  left: 38.5%;
+}
